@@ -15,8 +15,8 @@ import NUR_Cancel_Discharge_Advice.Nurse_Cancel_Discharge_Advice_Form_UI;
 import NUR_Cancel_Discharge_Advice.Nurse_Cancel_Discharge_Advice_UI;
 import NUR_Pages.NUR_Login_EM;
 import NUR_Pages.NUR_Select_Form_EM;
-import NUR_Discharge_Advice.Nurse_Prepare_Discharge_Advice;
-import NUR_Discharge_Advice.Nurse_Prepare_Discharge_Advice_UI;
+import NUR_Prepare_Discharge_Advice.Nurse_Prepare_Discharge_Advice;
+import NUR_Prepare_Discharge_Advice.Nurse_Prepare_Discharge_Advice_UI;
 import NUR_Release_Blocked.Nurse_Check_Unblock_Bed_UI;
 import Utilities.*;
 

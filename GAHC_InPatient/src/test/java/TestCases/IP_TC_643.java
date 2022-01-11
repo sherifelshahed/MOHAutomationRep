@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import NUR_Pages.*;
-import NUR_Discharge_Advice.*;
+import NUR_Prepare_Discharge_Advice.*;
 import Utilities.read_excel_data_EM_GroupC;
 
 public class IP_TC_643 {
