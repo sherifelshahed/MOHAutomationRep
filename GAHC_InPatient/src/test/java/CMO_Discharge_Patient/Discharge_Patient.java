@@ -9,7 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class Discharge_Patient {
-	public void discharge_patient(WebDriver driver) {
+	public void discharge_patient(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -30,17 +30,14 @@ public class Discharge_Patient {
 			By Specialty = By.name("specialty_desc");
 			driver.findElement(Specialty).sendKeys("GENS" + Keys.ENTER);
 
-			By Patient_Id = By.name("patient_id");
-			driver.findElement(Patient_Id).sendKeys("T200000003");
+			By PatientID_text = By.name("patient_id");
+			driver.findElement(PatientID_text).sendKeys(Patient_ID);
 
 			By Admission_Date_From = By.name("from_date");
 			driver.findElement(Admission_Date_From).sendKeys("22/12/2020 19:40");
 
 			By Search_Button = By.name("search");
 			driver.findElement(Search_Button).click();
-			driver.findElement(Search_Button).isSelected();
-
-			System.out.println("Search button is working");
 
 			driver.switchTo().defaultContent();
 
@@ -54,10 +51,10 @@ public class Discharge_Patient {
 
 			Thread.sleep(500);
 
-			String currentWindow = driver.getWindowHandle();
-			Set<String> windows = driver.getWindowHandles();
-			for (String window : windows) {
-				driver.switchTo().window(window);
+			String currentWindow1 = driver.getWindowHandle();
+			Set<String> windows1 = driver.getWindowHandles();
+			for (String window1 : windows1) {
+				driver.switchTo().window(window1);
 				System.out.println(driver.getTitle());
 			}
 			if (driver.getTitle().contains("Discharge Patient")) {
@@ -70,7 +67,6 @@ public class Discharge_Patient {
 
 				By Confirm_Discharge = By.name("confirm");
 				driver.findElement(Confirm_Discharge).click();
-
 			}
 
 		} catch (InterruptedException ex) {

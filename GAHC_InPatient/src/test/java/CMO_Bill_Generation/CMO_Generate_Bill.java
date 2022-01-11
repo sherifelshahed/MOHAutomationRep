@@ -1,7 +1,6 @@
 package CMO_Bill_Generation;
 
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
@@ -9,10 +8,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Bill_Generation {
-	public void generate_bill(WebDriver driver) {
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+public class CMO_Generate_Bill {
+	public void generate_bill(WebDriver driver, String Patient_ID) {
 
 		try {
 
@@ -29,14 +26,9 @@ public class Bill_Generation {
 				PatientIDText.clear();
 			} catch (Exception e) {
 			}
-			PatientIDText.sendKeys("");
+			PatientIDText.sendKeys(Patient_ID);
 
 			Thread.sleep(500);
-
-//			By Encounter_Period = By.name("encounter_period");
-//			driver.findElement(Encounter_Period).click();
-//			driver.findElement(Encounter_Period).sendKeys(Keys.ARROW_UP);
-//			driver.findElement(Encounter_Period).sendKeys(Keys.TAB);
 
 			By SearchBTN = By.name("search_button");
 			driver.findElement(SearchBTN).click();
@@ -80,17 +72,17 @@ public class Bill_Generation {
 
 					Thread.sleep(1000);
 
-//					String currentWindowx = driver.getWindowHandle();
-//					Set<String> windows1x = driver.getWindowHandles();
-//					for (String window1x : windows1x) {
-//						driver.switchTo().window(window1x);
-//						if (driver.getTitle().contains("Exemption Message")) {
-//							System.out.println(driver.getCurrentUrl());
-//
-//							WebElement YesBTN = driver.findElement(By.name("yes"));
-//							YesBTN.click();
-//						}
-//					}
+					String currentWindowx = driver.getWindowHandle();
+					Set<String> windows1x = driver.getWindowHandles();
+					for (String window1x : windows1x) {
+						driver.switchTo().window(window1x);
+						if (driver.getTitle().contains("Exemption Message")) {
+							System.out.println(driver.getCurrentUrl());
+
+							WebElement YesBTN = driver.findElement(By.name("yes"));
+							YesBTN.click();
+						}
+					}
 
 					org.openqa.selenium.Alert alert3 = driver.switchTo().alert();
 					String alertMessage3 = driver.switchTo().alert().getText();
@@ -112,7 +104,7 @@ public class Bill_Generation {
 			}
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(Bill_Generation.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(CMO_Generate_Bill.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }

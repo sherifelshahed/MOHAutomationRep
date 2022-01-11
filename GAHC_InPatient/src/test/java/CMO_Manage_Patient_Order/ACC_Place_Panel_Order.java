@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 
 public class ACC_Place_Panel_Order {
 
-	public void Order (WebDriver driver) {
+	public void Order(WebDriver driver, String Patient_ID) {
 
 		try {
 
@@ -26,12 +26,12 @@ public class ACC_Place_Panel_Order {
 			driver.switchTo().frame("BLChargePatientQueryFrame");
 			driver.switchTo().frame("search_frame");
 
-			WebElement Patient_ID = driver.findElement(By.name("patient_id"));
+			WebElement PatientIDText = driver.findElement(By.name("patient_id"));
 			try {
-				Patient_ID.clear();
+				PatientIDText.clear();
 			} catch (Exception e) {
 			}
-			Patient_ID.sendKeys("A200000403");
+			PatientIDText.sendKeys(Patient_ID);
 
 			WebElement SearchBTN = driver.findElement(By.name("search_button"));
 			SearchBTN.click();

@@ -1,5 +1,6 @@
 package CMO_Manage_Patient_Order;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.Set;
@@ -12,10 +13,10 @@ import org.openqa.selenium.WebElement;
 
 public class ACC_Add_Separate_Service {
 
-	public void Service(WebDriver driver) {
+	public void Service(WebDriver driver, String Patient_ID) {
 
 		try {
-			
+
 			WebElement Manage_Patient_Order = driver.findElement(By.id("sd17"));
 			Manage_Patient_Order.click();
 
@@ -28,18 +29,12 @@ public class ACC_Add_Separate_Service {
 			driver.switchTo().frame("BLChargePatientQueryFrame");
 			driver.switchTo().frame("search_frame");
 
-			WebElement Patient_ID = driver.findElement(By.name("patient_id"));
+			WebElement PatientIDText = driver.findElement(By.name("patient_id"));
 			try {
-				Patient_ID.clear();
+				PatientIDText.clear();
 			} catch (Exception e) {
 			}
-			Patient_ID.sendKeys();
-
-
-//			WebElement encounter_id = driver.findElement(By.name("encounter_id"));
-//			encounter_id.clear();
-//			Thread.sleep(500);
-//			encounter_id.sendKeys("10003324");
+			PatientIDText.sendKeys(Patient_ID);
 
 			WebElement SearchBTN = driver.findElement(By.name("search_button"));
 			SearchBTN.click();
@@ -52,7 +47,7 @@ public class ACC_Add_Separate_Service {
 			Thread.sleep(2000);
 
 			WebElement PatID = driver.findElement(By.xpath("//table[2]/tbody/tr[2]/td[4]/a"));
-//		assertEquals(Patient, PatID.getText());
+			assertEquals(Patient_ID, PatID.getText());
 			System.out.println("Search button is working and result is displaying: " + PatID.getText());
 			PatID.click();
 

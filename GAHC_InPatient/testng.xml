@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<test thread-count="5" name="Group A">
 		<classes>
-			<class name="TestCases.IP_TC_141_149_153_156_172_187" />
+			<class name="TestCases.IP_TC_410" />
 		</classes>
 	</test> <!-- Test -->
 
