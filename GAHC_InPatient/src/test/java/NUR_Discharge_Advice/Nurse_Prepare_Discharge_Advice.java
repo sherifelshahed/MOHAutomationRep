@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 
 public class Nurse_Prepare_Discharge_Advice {
 
-	public void discharge_advice(WebDriver driver) {
+	public void Prepare_Discharge_Advice(WebDriver driver, String Patient_ID) {
 
 		try {
 

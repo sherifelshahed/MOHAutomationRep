@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class Nurse_Cancel_Discharge_Advice_UI {
 
-	public void discharge_advice(WebDriver driver) {
+	public void discharge_advice(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
