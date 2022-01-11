@@ -1,4 +1,4 @@
-package NUR_Discharge_Advice;
+package NUR_Prepare_Discharge_Advice;
 
 import static org.testng.Assert.assertEquals;
 import java.util.Set;
