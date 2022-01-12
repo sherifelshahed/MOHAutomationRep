@@ -31,7 +31,7 @@ public class Nurse_Transfer_patients_within_the_same_nursing_unit {
 			driver.switchTo().frame("f_query_add_mod");
 
 			WebElement patientId = driver.findElement(By.name("patient_id"));
-			patientId.sendKeys("A200000403");
+			patientId.sendKeys(Patient_ID);
 			WebElement SearchBtn = driver.findElement(By.name("search"));
 			SearchBtn.click();
 

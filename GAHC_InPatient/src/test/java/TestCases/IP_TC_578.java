@@ -26,7 +26,7 @@ public class IP_TC_578 {
 	}
 
 	@Test
-	public void navigate_to_login() {
+	public void navigate_to_Nurse_Search_Intra_Ward_Patient_Transfer_by_Nursing_Unit() {
 
 		NUR_Login_EM login = new NUR_Login_EM();
 		login.login(driver);

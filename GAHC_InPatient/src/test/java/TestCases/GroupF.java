@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -14,7 +13,6 @@ import Utilities.*;
 
 public class GroupF {
 	WebDriver driver;
-
 
 	@Test(dataProvider = "test_data", priority = 2)
 	public void navigate_to_Prepare_Discharge_Advice(String Patient_ID) {
@@ -36,7 +34,6 @@ public class GroupF {
 		driver.quit();
 	}
 
-	
 	@AfterTest
 	public void close_browser() {
 //		driver.close();

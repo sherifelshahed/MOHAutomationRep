@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Nurse_Search_Intra_Ward_Patient_Transfer_by_Patient_ID {
-	public void transfer(WebDriver driver) {
+	public void transfer(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -27,8 +27,10 @@ public class Nurse_Search_Intra_Ward_Patient_Transfer_by_Patient_ID {
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);
 			driver.switchTo().frame("f_query_add_mod");
+
 			WebElement patientId = driver.findElement(By.name("patient_id"));
-			patientId.sendKeys("A200000403");
+			patientId.sendKeys(Patient_ID);
+
 			WebElement SearchBtn = driver.findElement(By.name("search"));
 			SearchBtn.click();
 

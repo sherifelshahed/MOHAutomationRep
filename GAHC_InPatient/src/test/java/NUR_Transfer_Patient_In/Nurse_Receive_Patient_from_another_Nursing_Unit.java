@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Nurse_Receive_Patient_from_another_Nursing_Unit {
-	public void transfer(WebDriver driver) {
+	public void transfer(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -28,7 +28,7 @@ public class Nurse_Receive_Patient_from_another_Nursing_Unit {
 			driver.switchTo().frame("f_query_add_mod");
 
 			WebElement PatientID = driver.findElement(By.xpath("//table/tbody/tr[6]/td/table/tbody/tr/td[2]/input"));
-			PatientID.sendKeys("A200000382");
+			PatientID.sendKeys(Patient_ID);
 
 			WebElement SearchBTN = driver.findElement(By.xpath("//table[2]/tbody/tr/td[2]/input"));
 			SearchBTN.click();

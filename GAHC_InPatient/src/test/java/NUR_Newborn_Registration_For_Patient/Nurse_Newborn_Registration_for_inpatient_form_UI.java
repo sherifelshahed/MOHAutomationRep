@@ -11,7 +11,7 @@ import org.openqa.selenium.Keys;
 
 public class Nurse_Newborn_Registration_for_inpatient_form_UI {
 
-	public void newborn_registration(WebDriver driver) {
+	public void newborn_registration(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -30,7 +30,7 @@ public class Nurse_Newborn_Registration_for_inpatient_form_UI {
 			WebElement PatientID = driver.findElement(By.xpath("//table/tbody/tr[4]/td/table/tbody/tr/td"));
 			System.out.println("Patinet ID is Existing with Title: " + PatientID.getText());
 			WebElement PatientIDTXT = driver.findElement(By.xpath("//table/tbody/tr[4]/td/table/tbody/tr/td[2]/input"));
-			PatientIDTXT.sendKeys("");
+			PatientIDTXT.sendKeys(Patient_ID);
 
 			WebElement SearchBTN = driver.findElement(By.xpath("//table[2]/tbody/tr/td[2]/input"));
 			System.out.println("Search button is existing with title:  " + SearchBTN.getAttribute("value"));

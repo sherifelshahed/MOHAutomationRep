@@ -28,8 +28,10 @@ public class Nurse_Search_Intra_Ward_Patient_Transfer_by_Encounter_ID {
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);
 			driver.switchTo().frame("f_query_add_mod");
+			
 			WebElement encounter_txt = driver.findElement(By.name("encounter_id"));
 			encounter_txt.sendKeys("10002797");
+			
 			WebElement SearchBtn = driver.findElement(By.name("search"));
 			SearchBtn.click();
 
