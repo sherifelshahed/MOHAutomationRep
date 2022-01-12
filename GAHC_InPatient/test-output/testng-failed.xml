@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Group A(failed)">
+  <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="TestCases.IP_TC_141_149_153_156_172_187">
+      <class name="TestCases.GroupB">
         <methods>
-          <include name="setup"/>
           <include name="close_browser"/>
           <include name="navigate_to_Cancel_Admission"/>
         </methods>
-      </class> <!-- TestCases.IP_TC_141_149_153_156_172_187 -->
+      </class> <!-- TestCases.GroupB -->
     </classes>
-  </test> <!-- Group A(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -117,15 +117,7 @@ public class Nurse_Check_Block_Bed_with_all_data_required {
 			WebElement ApplyBTN = driver
 					.findElement(By.xpath("//table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[1]/input"));
 			System.out.println("Apply Button is Existing. " + ApplyBTN.getAttribute("value"));
-			WebElement ResetBTN = driver
-					.findElement(By.xpath("//table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[2]/input"));
-			System.out.println("Reset Button is Existing. " + ResetBTN.getAttribute("value"));
-			ResetBTN.click();
-
-			WebElement Menu = driver
-					.findElement(By.xpath("//table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[4]/input"));
-			System.out.println("Menu Button is Existing. " + Menu.getAttribute("value"));
-			Menu.click();
+			ApplyBTN.click();
 
 		} catch (
 

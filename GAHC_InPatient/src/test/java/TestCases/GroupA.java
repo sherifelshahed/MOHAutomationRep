@@ -10,11 +10,18 @@ import org.testng.annotations.Test;
 import CMO_AssignBed_MarkPatientArrival.*;
 import CMO_Cancel_Admission.*;
 import CMO_Pages.*;
+import NUR_Bed_Availability.Check_Bed_Availibility_Chart;
+import NUR_Block_Bed.Nurse_Check_Block_Bed_UI;
+import NUR_Block_Bed.Nurse_Check_Block_Bed_with_all_data_required;
 import NUR_Intra_Ward_Patient_Transfer.*;
 import NUR_Newborn_Registration_For_Patient.*;
 import NUR_Pages.*;
+import NUR_Release_Blocked.Nurse_Check_Unblock_Bed_UI;
+import NUR_Release_Blocked.Nurse_Release_Blocked_Bed;
+import NUR_Transfer_Bulk_practitioner.Nurse_Transfer_Bulk_practitioner;
 import NUR_Transfer_Patient_In.*;
 import NUR_Transfer_Patient_Out.*;
+import NUR_Transfer_Practitioner.Nurse_Transfer_practitioner;
 import Utilities.*;
 
 public class GroupA {
@@ -443,9 +450,198 @@ public class GroupA {
 
 	}
 
-	// IP_TC_141_149_153_156_172_187_270
+	// IP_TC_634
 
 	@Test(dataProvider = "test_data", priority = 18)
+	public void navigate_to_Nurse_Transfer_practitioner(String Patient_ID) {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Transfer_practitioner trans = new Nurse_Transfer_practitioner();
+		trans.Transfer(driver, Patient_ID);
+
+		driver.close();
+
+	}
+
+	// IP_TC_635
+
+	@Test(priority = 19)
+	public void Nurse_Transfer_Bulk_practitioner() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Transfer_Bulk_practitioner trans = new Nurse_Transfer_Bulk_practitioner();
+		trans.Transfer(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_883
+
+	@Test(priority = 20)
+	public void navigate_to_Check_Bed_Availibility_Chart() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Check_Bed_Availibility_Chart Bed = new Check_Bed_Availibility_Chart();
+		Bed.View_Bed_Availability(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_605
+
+	@Test(priority = 21)
+	public void navigate_to_Nurse_Check_Block_Bed_UI() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Check_Block_Bed_UI UI = new Nurse_Check_Block_Bed_UI();
+		UI.bed(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_606
+
+	@Test(priority = 22)
+	public void navigate_to_Nurse_Check_Block_Bed_with_all_data_required() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Check_Block_Bed_with_all_data_required bed = new Nurse_Check_Block_Bed_with_all_data_required();
+		bed.bed(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_615
+
+	@Test(priority = 23)
+	public void navigate_to_Nurse_Check_Unblock_Bed_UI() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Check_Unblock_Bed_UI UI = new Nurse_Check_Unblock_Bed_UI();
+		UI.bed(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_616
+
+	@Test(priority = 24)
+	public void navigate_to_Nurse_Release_Blocked_Bed() {
+
+		// System Property for IE Driver
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
+		// Initialize InternetExplorer
+		driver = new InternetExplorerDriver();
+		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
+		driver.manage().window().maximize();
+
+		NUR_Login_EM login = new NUR_Login_EM();
+		login.login(driver);
+
+		NUR_Select_Form_EM form = new NUR_Select_Form_EM();
+		form.select_form(driver);
+
+		Nurse_Release_Blocked_Bed bed = new Nurse_Release_Blocked_Bed();
+		bed.bed(driver);
+
+		driver.close();
+
+	}
+
+	// IP_TC_141_149_153_156_172_187_270
+
+	@Test(dataProvider = "test_data", priority = 25)
 	public void navigate_to_Cancel_Admission(String Patient_ID) {
 
 		// System Property for IE Driver
@@ -472,7 +668,7 @@ public class GroupA {
 
 	@AfterTest
 	public void close_browser() {
-		driver.close();
+//		driver.close();
 	}
 
 	@DataProvider

@@ -117,6 +117,7 @@ public class Nurse_Check_Block_Bed_UI {
 			WebElement ApplyBTN = driver
 					.findElement(By.xpath("//table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[1]/input"));
 			System.out.println("Apply Button is Existing. " + ApplyBTN.getAttribute("value"));
+
 			WebElement ResetBTN = driver
 					.findElement(By.xpath("//table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td[2]/input"));
 			System.out.println("Reset Button is Existing. " + ResetBTN.getAttribute("value"));

@@ -11,7 +11,9 @@ import org.openqa.selenium.WebElement;
 
 public class CMO_Admit_and_Register_Patient {
 
-	public void admit_patient(WebDriver driver, String PatientIDvalue) {
+	public String PatientIDvalue;
+
+	public String admit_patient(WebDriver driver) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		try {
@@ -115,7 +117,7 @@ public class CMO_Admit_and_Register_Patient {
 
 									driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-									Thread.sleep(6000);
+									Thread.sleep(10000);
 
 									By Primary_Billing_Group = By.name("billing_group_desc");
 									driver.findElement(Primary_Billing_Group)
@@ -307,93 +309,80 @@ public class CMO_Admit_and_Register_Patient {
 																	By ApplyBTN = By.name("apply");
 																	driver.findElement(ApplyBTN).click();
 
-																	String currentWindow7 = driver.getWindowHandle();
-																	Set<String> windows7 = driver.getWindowHandles();
-																	for (String window7 : windows7) {
-																		driver.switchTo().window(window7);
+//																	String currentWindow7 = driver.getWindowHandle();
+//																	Set<String> windows7 = driver.getWindowHandles();
+//																	for (String window7 : windows7) {
+//																		driver.switchTo().window(window7);
+//
+//																		if (driver.getTitle()
+//																				.contains("Admission Deposit")) {
+//
+//																			Thread.sleep(500);
+//																			driver.switchTo().parentFrame();
+//																			driver.switchTo().defaultContent();
+//																			driver.switchTo().frame("details_frame");
+//
+//																			By rec_type_search = By.name("rec_type");
+//																			driver.findElement(rec_type_search).click();
+//
+//																			Thread.sleep(4000);
+//																			driver.switchTo().defaultContent();
+//																			driver.switchTo().frame(3);
+//
+//																			By Add = By.name("add_bill_stlmt_button");
+//																			driver.findElement(Add).click();
+//
+//																			Thread.sleep(1000);
+//
+//																			String currentWindow8 = driver
+//																					.getWindowHandle();
+//																			Set<String> windows8 = driver
+//																					.getWindowHandles();
+//																			for (String window8 : windows8) {
+//																				driver.switchTo().window(window8);
+//																				System.out.println(driver.getTitle());
+//																				if (driver.getTitle().contains(
+//																						"Add Bill Settlements Details")) {
+//
+//																					Thread.sleep(1000);
+//
+//																					driver.switchTo().defaultContent();
+//																					driver.switchTo().frame(
+//																							"BillSlmtToolBarFrame");
+//
+//																					By Accept = By
+//																							.name("accept_button");
+//																					driver.findElement(Accept).click();
+//
+//																					Thread.sleep(1500);
+//
+//																					driver.switchTo().window(window7);
+//																					driver.switchTo().parentFrame();
+//																					driver.switchTo().defaultContent();
+//																					driver.switchTo().frame(4);
+//
+//																					By record_button = By
+//																							.name("cancel_button");
+//																					driver.findElement(record_button)
+//																							.click();
+//
+//																					System.out.println(
+//																							"Operation Completed Successfully");
 
+																	Thread.sleep(3000);
+
+																	String currentWindow9 = driver.getWindowHandle();
+																	Set<String> windows9 = driver.getWindowHandles();
+																	for (String window9 : windows9) {
+																		driver.switchTo().window(window9);
+																		System.out.println(driver.getTitle());
 																		if (driver.getTitle()
-																				.contains("Admission Deposit")) {
-
-																			Thread.sleep(500);
-																			driver.switchTo().parentFrame();
-																			driver.switchTo().defaultContent();
-																			driver.switchTo().frame("details_frame");
-
-																			By rec_type_search = By.name("rec_type");
-																			driver.findElement(rec_type_search).click();
-
-																			Thread.sleep(4000);
-																			driver.switchTo().defaultContent();
-																			driver.switchTo().frame(3);
-
-																			By Add = By.name("add_bill_stlmt_button");
-																			driver.findElement(Add).click();
+																				.contains("Internal Reports")) {
+																			System.out.println(driver.getCurrentUrl());
+																			driver.close();
 
 																			Thread.sleep(1000);
 
-																			String currentWindow8 = driver
-																					.getWindowHandle();
-																			Set<String> windows8 = driver
-																					.getWindowHandles();
-																			for (String window8 : windows8) {
-																				driver.switchTo().window(window8);
-																				System.out.println(driver.getTitle());
-																				if (driver.getTitle().contains(
-																						"Add Bill Settlements Details")) {
-
-																					Thread.sleep(1000);
-
-																					driver.switchTo().defaultContent();
-																					driver.switchTo().frame(
-																							"BillSlmtToolBarFrame");
-
-																					By Accept = By
-																							.name("accept_button");
-																					driver.findElement(Accept).click();
-
-																					Thread.sleep(1500);
-
-																					driver.switchTo().window(window7);
-																					driver.switchTo().parentFrame();
-																					driver.switchTo().defaultContent();
-																					driver.switchTo().frame(4);
-
-																					By record_button = By
-																							.name("cancel_button");
-																					driver.findElement(record_button)
-																							.click();
-
-																					System.out.println(
-																							"Operation Completed Successfully");
-
-																					Thread.sleep(3000);
-
-																					String currentWindow9 = driver
-																							.getWindowHandle();
-																					Set<String> windows9 = driver
-																							.getWindowHandles();
-																					for (String window9 : windows8) {
-																						driver.switchTo()
-																								.window(window9);
-																						System.out.println(
-																								driver.getTitle());
-																						if (driver.getTitle().contains(
-																								"Internal Reports")) {
-																							System.out.println(driver
-																									.getCurrentUrl());
-
-																							WebElement cancel = driver
-																									.findElement(By
-																											.name("cancel"));
-																							cancel.click();
-
-																							Thread.sleep(1000);
-
-																						}
-																					}
-																				}
-																			}
 																		}
 																	}
 																}
@@ -416,6 +405,7 @@ public class CMO_Admit_and_Register_Patient {
 		InterruptedException ex) {
 			Logger.getLogger(CMO_Admit_and_Register_Patient.class.getName()).log(Level.SEVERE, null, ex);
 		}
+		return PatientIDvalue;
 
 	}
 

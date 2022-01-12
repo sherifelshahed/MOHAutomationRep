@@ -24,7 +24,7 @@ public class Nurse_Transfer_Bulk_practitioner {
 			driver.switchTo().frame("f_query_add_mod");
 
 			WebElement AttendingPrac1 = driver.findElement(By.name("practid_desc_from"));
-			AttendingPrac1.sendKeys("Doctor El Zohour Inpatient 01");
+			AttendingPrac1.sendKeys("Doctor El Zohour Inpatient 03");
 			WebElement AttendingPrac1BTN = driver.findElement(By.name("pract_id_search"));
 			AttendingPrac1BTN.click();
 
@@ -35,28 +35,28 @@ public class Nurse_Transfer_Bulk_practitioner {
 			TransferType.sendKeys(Keys.TAB);
 
 			WebElement AttendingPrac2 = driver.findElement(By.name("practid_desc_to"));
-			AttendingPrac2.sendKeys("Doctor El Zohour Inpatient 03");
+			AttendingPrac2.sendKeys("Doctor El Zohour Inpatient 01");
 			WebElement AttendingPrac2BTN = driver.findElement(By.name("pract_id_search"));
 			AttendingPrac2BTN.click();
 
 			WebElement SearchBTN = driver.findElement(By.name("search"));
 			SearchBTN.click();
 
-			driver.switchTo().parentFrame();
-			driver.switchTo().defaultContent();
-			driver.switchTo().frame(2);
-			driver.switchTo().frame("f_query_add_mod1");
-
-			for (int i = 0; i < 50; i++) {
-
-				try {
-
-					WebElement CheckBox = driver.findElement(By.name("Check" + i + ""));
-					CheckBox.click();
-				} catch (Exception e) {
-
-				}
-			}
+//			driver.switchTo().parentFrame();
+//			driver.switchTo().defaultContent();
+//			driver.switchTo().frame(2);
+//			driver.switchTo().frame("f_query_add_mod1");
+//
+//			for (int i = 0; i < 25; i++) {
+//
+//				try {
+//
+//					WebElement CheckBox = driver.findElement(By.name("Check" + i + ""));
+//					CheckBox.click();
+//				} catch (Exception e) {
+//
+//				}
+//			}
 			driver.switchTo().defaultContent();
 			driver.switchTo().parentFrame();
 			driver.switchTo().defaultContent();

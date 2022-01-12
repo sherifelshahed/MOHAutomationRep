@@ -26,7 +26,7 @@ public class IP_TC_140 {
 	}
 
 	@Test
-	public void navigate_to_Admit_and_Register_Patient() {
+	public void navigate_to_CMO_Admit_and_Register_Patient() {
 
 		CMO_Login_EM login = new CMO_Login_EM();
 		login.login(driver);
@@ -35,9 +35,8 @@ public class IP_TC_140 {
 		form.select_form(driver);
 
 		CMO_Admit_and_Register_Patient admit = new CMO_Admit_and_Register_Patient();
-		admit.admit_patient(driver, null);
+		admit.admit_patient(driver);
 
-//		return PatientIDvalue;
 	}
 
 	@AfterTest

@@ -26,7 +26,7 @@ public class IP_TC_053_054_055_056_059_061_070_071_073_074_077_079_081_083_093_0
 	}
 
 	@Test
-	public void navigate_to_login(String PatientIDvalue) {
+	public void navigate_to_CMO_Admit_and_Register_Patient() {
 
 		CMO_Login_EM login = new CMO_Login_EM();
 		login.login(driver);
@@ -35,7 +35,7 @@ public class IP_TC_053_054_055_056_059_061_070_071_073_074_077_079_081_083_093_0
 		form.select_form(driver);
 
 		CMO_Admit_and_Register_Patient admit = new CMO_Admit_and_Register_Patient();
-		admit.admit_patient(driver, PatientIDvalue);
+		admit.admit_patient(driver);
 	}
 
 	@AfterTest

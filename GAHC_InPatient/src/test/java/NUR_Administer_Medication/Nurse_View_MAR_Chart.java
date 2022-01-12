@@ -49,42 +49,41 @@ public class Nurse_View_MAR_Chart {
 					driver.switchTo().defaultContent();
 					driver.switchTo().frame("content");
 					driver.switchTo().frame("f_search");
+
+					WebElement SearchBTN = driver.findElement(By.id("Search"));
+					SearchBTN.click();
+
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame("content");
+					driver.switchTo().frame("f_query_add_mod");
+					driver.switchTo().frame("f_patient_details");
+					driver.switchTo().frame("f_bedheader");
+
+					WebElement PatientIDText = driver.findElement(By.id("patient_id_1"));
+					System.out.println(PatientIDText.getText());
+					PatientIDText.click();
+					Thread.sleep(2000);
+
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame("content");
+					driver.switchTo().frame("f_query_add_mod");
+					driver.switchTo().frame("f_admin_button");
+
+					WebElement ViewMedAdmChart = driver.findElement(By.name("btnViewAdminDetails"));
+					ViewMedAdmChart.click();
+
+					Set<String> windowsz = driver.getWindowHandles();
+					for (String windowv : windowsz) {
+						driver.switchTo().window(windowv);
+						if (driver.getTitle().contains("Medication Administration Detail")) {
+
+							assertTrue(driver.getTitle().contains("Medication Administration Detail"));
+							System.out.println("Mar Chart is Displayed Successfully.");
+
+						}
+					}
 				}
 			}
-
-			WebElement SearchBTN = driver.findElement(By.id("Search"));
-			SearchBTN.click();
-
-			driver.switchTo().defaultContent();
-			driver.switchTo().frame("content");
-			driver.switchTo().frame("f_query_add_mod");
-			driver.switchTo().frame("f_patient_details");
-			driver.switchTo().frame("f_bedheader");
-
-			WebElement PatientID = driver.findElement(By.id("patient_id_1"));
-			System.out.println(PatientID.getText());
-			PatientID.click();
-			Thread.sleep(2000);
-
-			driver.switchTo().defaultContent();
-			driver.switchTo().frame("content");
-			driver.switchTo().frame("f_query_add_mod");
-			driver.switchTo().frame("f_admin_button");
-
-			WebElement ViewMedAdmChart = driver.findElement(By.name("btnViewAdminDetails"));
-			ViewMedAdmChart.click();
-
-			Set<String> windowsz = driver.getWindowHandles();
-			for (String windowv : windowsz) {
-				driver.switchTo().window(windowv);
-				if (driver.getTitle().contains("Medication Administration Detail")) {
-
-					assertTrue(driver.getTitle().contains("Medication Administration Detail"));
-					System.out.println("Mar Chart is Displayed Successfully.");
-
-				}
-			}
-
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Nurse_View_MAR_Chart.class.getName()).log(Level.SEVERE, null, ex);
 		}

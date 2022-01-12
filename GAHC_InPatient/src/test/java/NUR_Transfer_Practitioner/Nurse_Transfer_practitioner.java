@@ -1,6 +1,5 @@
 package NUR_Transfer_Practitioner;
 
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.openqa.selenium.By;
@@ -10,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class Nurse_Transfer_practitioner {
 
-	public void Transfer(WebDriver driver) {
+	public void Transfer(WebDriver driver, String Patient_ID) {
 
 		try {
 
@@ -24,7 +23,7 @@ public class Nurse_Transfer_practitioner {
 			driver.switchTo().frame("f_query_add_mod");
 
 			WebElement patientId = driver.findElement(By.name("patient_id"));
-			patientId.sendKeys("A200000403");
+			patientId.sendKeys("Patient_ID");
 			WebElement SearchBtn = driver.findElement(By.name("search"));
 			SearchBtn.click();
 
@@ -48,37 +47,28 @@ public class Nurse_Transfer_practitioner {
 					TransferTypeDDL.click();
 					TransferTypeDDL.sendKeys(Keys.ARROW_DOWN);
 					TransferTypeDDL.sendKeys(Keys.TAB);
-					// to select a practitioner
+
+					// select a practitioner
+
+					WebElement PractitionerText = driver.findElement(By.name("pract_desc"));
+					PractitionerText.sendKeys("DOCIPD01");
+
 					WebElement PractitionerLookupBtn = driver.findElement(By.name("pract_id_search"));
-					String current = driver.getWindowHandle();
 					PractitionerLookupBtn.click();
 
-					Set<String> winds = driver.getWindowHandles();
-					for (String wind : winds) {
-						driver.switchTo().window(wind);
-						System.out.println(driver.getTitle());
-
-						if (driver.getTitle().equals("Practitioner")) {
-							System.out.println(driver.getCurrentUrl());
-							driver.switchTo().frame("result_frame");
-							WebElement PractitionerCodeLink = driver
-									.findElement(By.partialLinkText("Doctor El Zohour Inpatient 01"));
-							PractitionerCodeLink.click();
-							Thread.sleep(5000);
-
-						}
-						driver.switchTo().window(current);
-						driver.switchTo().defaultContent();
-						driver.switchTo().frame("Transfer_frame");
-						WebElement transferBtn = driver.findElement(By.name("transfer"));
-						transferBtn.click();
-						Thread.sleep(5000);
-						driver.switchTo().alert().getText();
-					}
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame("Transfer_frame");
+					WebElement transferBtn = driver.findElement(By.name("transfer"));
+					transferBtn.click();
+					Thread.sleep(5000);
+					driver.switchTo().alert().getText();
 
 				}
 			}
-		} catch (InterruptedException ex) {
+
+		} catch (
+
+		InterruptedException ex) {
 			Logger.getLogger(Nurse_Transfer_practitioner.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
