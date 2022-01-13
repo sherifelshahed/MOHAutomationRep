@@ -3,12 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="TestCases.GroupB">
+      <class name="TestCases.GroupM">
         <methods>
+          <include name="navigate_to_Deliver" invocation-numbers="0"/>
           <include name="close_browser"/>
-          <include name="navigate_to_Cancel_Admission"/>
+          <include name="navigate_to_Fill" invocation-numbers="0"/>
+          <include name="navigate_to_Stock_Availability_of_medications" invocation-numbers="0"/>
+          <include name="navigate_to_Prescribe_Medications" invocation-numbers="0"/>
+          <include name="navigate_to_Verification" invocation-numbers="0"/>
         </methods>
-      </class> <!-- TestCases.GroupB -->
+      </class> <!-- TestCases.GroupM -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

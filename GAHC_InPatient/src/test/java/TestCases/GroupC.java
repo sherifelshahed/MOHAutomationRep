@@ -12,21 +12,14 @@ import org.testng.annotations.Test;
 import CMO_Bill_Generation.CMO_Generate_Bill;
 import CMO_Cancel_Discharge.CMO_Cancel_Discharge;
 import CMO_Discharge_Patient.Discharge_Patient;
-import CMO_Manage_Patient_Order.ACC_Add_Separate_Service;
-import CMO_Manage_Patient_Order.ACC_Cancel_Panel_Order;
-import CMO_Manage_Patient_Order.ACC_Cancel_Service;
-import CMO_Manage_Patient_Order.ACC_Check_Panel_Order_for_Patient;
-import CMO_Manage_Patient_Order.ACC_Place_Panel_Order;
-import CMO_Pages.CMO_Login_EM;
+import CMO_Manage_Patient_Order.*;
 import CMO_Pages.CMO_Select_Form;
 import Discharge_Patient_Process.*;
-import NUR_Cancel_Discharge_Advice.Nurse_Cancel_Discharge_Advice;
-import NUR_Cancel_Discharge_Advice.Nurse_Cancel_Discharge_Advice_Form_UI;
-import NUR_Cancel_Discharge_Advice.Nurse_Cancel_Discharge_Advice_UI;
+import NUR_Cancel_Discharge_Advice.*;
 import NUR_Pages.NUR_Login_EM;
 import NUR_Pages.NUR_Select_Form_EM;
-import NUR_Prepare_Discharge_Advice.Nurse_Prepare_Discharge_Advice;
-import NUR_Prepare_Discharge_Advice.Nurse_Prepare_Discharge_Advice_UI;
+import NUR_Prepare_Discharge_Advice.*;
+
 import Utilities.*;
 
 public class GroupC {

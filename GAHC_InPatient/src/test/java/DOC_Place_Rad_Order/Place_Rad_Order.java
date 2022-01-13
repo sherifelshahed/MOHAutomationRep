@@ -6,13 +6,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Place_Rad_Order {
 
 	public void Physicians_order_Edge(WebDriver driver) {
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		try {
 
 			Thread.sleep(3000);

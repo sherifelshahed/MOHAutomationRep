@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 
 public class Stock_Availability_of_medications {
 
-	public void Stock(WebDriver driver) {
+	public void Stock(WebDriver driver,String Patient_ID) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		try {
@@ -49,8 +49,8 @@ public class Stock_Availability_of_medications {
 					driver.switchTo().frame("f_query_add_mod");
 					driver.switchTo().frame("f_query_criteria");
 
-					WebElement RMpatientID = driver.findElement(By.name("patient_id"));
-					RMpatientID.sendKeys("A200000403");
+					WebElement patientIDText = driver.findElement(By.name("patient_id"));
+					patientIDText.sendKeys(Patient_ID);
 
 					Thread.sleep(500);
 

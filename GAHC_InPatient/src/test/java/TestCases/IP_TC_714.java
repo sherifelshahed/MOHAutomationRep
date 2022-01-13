@@ -20,8 +20,11 @@ public class IP_TC_714 {
 
 	@BeforeTest
 	public void setup() {
+
 		// System Property for Edge Driver
-		System.setProperty("webdriver.edge.driver", "D:\\Automation testing tools\\Edgedriver\\msedgedriver.exe");
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);
+
 		// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
@@ -29,7 +32,7 @@ public class IP_TC_714 {
 	}
 
 	@Test(dataProvider = "test_data")
-	public void navigate_to_login(String Patient_ID) {
+	public void navigate_to_Prescribe_Medications(String Patient_ID) {
 
 		DOC_Login_HP Login = new DOC_Login_HP();
 		Login.login_Edge(driver);
@@ -46,7 +49,7 @@ public class IP_TC_714 {
 
 	@AfterTest
 	public void close() {
-//		driver.close();
+		driver.close();
 	}
 
 	@DataProvider

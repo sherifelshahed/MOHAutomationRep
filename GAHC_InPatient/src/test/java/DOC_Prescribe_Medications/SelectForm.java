@@ -10,8 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 public class SelectForm {
 	public void select_form(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		try {
 
 			Thread.sleep(6000);

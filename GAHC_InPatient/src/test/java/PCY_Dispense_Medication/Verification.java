@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 public class Verification {
 
-	public void verification(WebDriver driver) {
+	public void verification(WebDriver driver, String Patient_ID) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		try {
@@ -46,8 +46,8 @@ public class Verification {
 			driver.switchTo().frame("f_query_add_mod");
 			driver.switchTo().frame("f_query_criteria");
 
-			WebElement RMpatientID = driver.findElement(By.name("patient_id"));
-			RMpatientID.sendKeys("A200000403");
+			WebElement patientIDText = driver.findElement(By.name("patient_id"));
+			patientIDText.sendKeys(Patient_ID);
 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("content");

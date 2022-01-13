@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Login_EM {
+public class Login_EM_Lab {
 
 	public void login(WebDriver driver) {
 
@@ -19,6 +19,9 @@ public class Login_EM {
 
 		By loginButton = By.id("loginID");
 		driver.findElement(loginButton).click();
+
+		By OKButton = By.id("loginID");
+		driver.findElement(OKButton).click();
 
 	}
 }

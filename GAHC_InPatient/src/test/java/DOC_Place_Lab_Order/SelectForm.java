@@ -1,5 +1,6 @@
 package DOC_Place_Lab_Order;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -9,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 public class SelectForm {
 	public void select_form(WebDriver driver) {
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		try {
 
 			Thread.sleep(5000);

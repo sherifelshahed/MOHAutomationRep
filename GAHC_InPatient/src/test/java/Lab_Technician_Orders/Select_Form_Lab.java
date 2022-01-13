@@ -1,4 +1,4 @@
-package Rad_Technician_Orders;
+package Lab_Technician_Orders;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Select_Form {
+public class Select_Form_Lab {
 
 	public void select_form(WebDriver driver) {
 

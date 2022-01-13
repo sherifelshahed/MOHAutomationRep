@@ -1,4 +1,4 @@
-package Lab_Technician_Orders;
+package Rad_Technician_Orders;
 
 import static org.testng.Assert.assertTrue;
 
@@ -10,9 +10,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Register_Order {
+public class Register_Rad_Order {
 
-	public void Register(WebDriver driver) {
+	public void register(WebDriver driver, String Patient_ID) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		try {
 
@@ -36,8 +36,8 @@ public class Register_Order {
 			driver.findElement(Order_Category).sendKeys(Keys.ARROW_UP);
 			driver.findElement(Order_Category).sendKeys(Keys.TAB);
 
-			By Patient_ID = By.name("patientId");
-			driver.findElement(Patient_ID).sendKeys("D700001527");
+			By Patient_IDText = By.name("patientId");
+			driver.findElement(Patient_IDText).sendKeys(Patient_ID);
 
 			By search_btn = By.name("search_btn");
 			driver.findElement(search_btn).click();
@@ -67,7 +67,7 @@ public class Register_Order {
 			assertTrue(Message.getText().contains("Operation Completed Successfully"));
 
 		} catch (InterruptedException ex) {
-			Logger.getLogger(Register_Order.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(Register_Rad_Order.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }

@@ -14,8 +14,7 @@ public class Prescribe_Medications {
 
 	public void Physicians_Prescribe_Medications_Edge(WebDriver driver) {
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		try {
 
 			Thread.sleep(3000);
