@@ -21,6 +21,8 @@ public class DOC_SelectPatientIP {
 					.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/div/div/div[1]/input");
 			driver.findElement(searchText).sendKeys(Patient_ID + Keys.ENTER);
 
+			Thread.sleep(20000);
+
 			// Select the patient
 			By patientName = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-crm-leads/div[2]/div/div[2]/div/div/app-crm-patients-list/div/div[2]/div/div/div[1]/div[1]");

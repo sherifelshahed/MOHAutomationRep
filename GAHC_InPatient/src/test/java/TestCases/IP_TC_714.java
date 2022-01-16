@@ -4,15 +4,14 @@ import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 import DOC_Pages.*;
 import DOC_Prescribe_Medications.*;
 import Utilities.read_excel_data_HP;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class IP_TC_714 {
 
@@ -21,12 +20,19 @@ public class IP_TC_714 {
 	@BeforeTest
 	public void setup() {
 
-		// System Property for Edge Driver
-		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
-		System.setProperty("webdriver.edge.driver", EdgePath);
+//		// System Property for Edge Driver
+//		String EdgePath = System.getProperty("user.dir") + "\\test\\msedgedriver.exe";
+//		System.setProperty("webdriver.edge.driver", EdgePath);
+
+		// Edge Driver
+		WebDriverManager.edgedriver().setup();
 
 		// Initialize Edge Driver
 		driver = new EdgeDriver();
+
+//		driver.navigate().to("https://utasks-main.web.app/login");
+//		driver.manage().window().maximize();
+
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
 	}
@@ -49,7 +55,7 @@ public class IP_TC_714 {
 
 	@AfterTest
 	public void close() {
-		driver.close();
+//		driver.close();
 	}
 
 	@DataProvider

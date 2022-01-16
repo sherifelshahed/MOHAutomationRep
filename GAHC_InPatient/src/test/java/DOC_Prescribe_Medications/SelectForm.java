@@ -10,10 +10,12 @@ import org.openqa.selenium.WebDriver;
 
 public class SelectForm {
 	public void select_form(WebDriver driver) {
+
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
 		try {
 
-			Thread.sleep(6000);
+			Thread.sleep(16000);
 			// Click on Action
 			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[6]");
 			driver.findElement(Action).click();
