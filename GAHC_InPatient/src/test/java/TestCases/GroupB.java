@@ -14,6 +14,7 @@ import CMO_Pages.*;
 public class GroupB extends CMO_Admit_and_Register_Patient {
 	WebDriver driver;
 
+	// test
 	@Test(priority = 1)
 	public void navigate_to_CMO_Admit_and_Register_Patient() {
 
