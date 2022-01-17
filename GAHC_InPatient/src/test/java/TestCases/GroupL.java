@@ -35,7 +35,7 @@ public class GroupL {
 		Login.login_Edge(driver);
 
 		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP_Edge(driver, Patient_ID);
+		select_patient.selectpatientIP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);
@@ -90,7 +90,7 @@ public class GroupL {
 		Login.login_Edge(driver);
 
 		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP_Edge(driver, Patient_ID);
+		select_patient.selectpatientIP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);

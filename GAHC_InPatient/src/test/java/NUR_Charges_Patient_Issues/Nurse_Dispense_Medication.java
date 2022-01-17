@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 public class Nurse_Dispense_Medication {
 
-	public void Medication(WebDriver driver) {
+	public void Medication(WebDriver driver, String Patient_ID) {
 
 		try {
 
@@ -36,7 +36,7 @@ public class Nurse_Dispense_Medication {
 			SalesTypeDDL.sendKeys(Keys.ARROW_DOWN);
 			SalesTypeDDL.sendKeys(Keys.TAB);
 			WebElement patientId = driver.findElement(By.name("patient_id"));
-			patientId.sendKeys("A200000405");
+			patientId.sendKeys(Patient_ID);
 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);

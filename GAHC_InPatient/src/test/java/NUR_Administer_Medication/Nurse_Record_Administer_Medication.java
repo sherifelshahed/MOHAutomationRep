@@ -17,9 +17,9 @@ public class Nurse_Record_Administer_Medication {
 			WebElement Medication_Administration_btn = driver.findElement(By.id("sd12"));
 			Medication_Administration_btn.click();
 
-			Thread.sleep(500);			
+			Thread.sleep(500);
 			System.out.println("Nurse is Navigated to Medication Administration Page Successfully");
-			
+
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);
 			driver.switchTo().frame("f_search");
@@ -64,13 +64,31 @@ public class Nurse_Record_Administer_Medication {
 			WebElement PatientIDHyperLink = driver.findElement(By.xpath("//label[contains(.,'Test')]"));
 			PatientIDHyperLink.click();
 
+			Thread.sleep(2000);
+
 			driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);
 			driver.switchTo().frame("f_query_add_mod");
 			driver.switchTo().frame("f_admin_chart");
-			WebElement check = driver.findElement(By.name("chk_non_iv_select_2"));
+			WebElement check = driver.findElement(By.name("pat_brought_med_1"));
 			check.click();
+
+			Thread.sleep(100);
+
+			WebElement Batch_ID = driver.findElement(By.name("non_iv_shared_drug_1"));
+			Batch_ID.click();
+
+			Thread.sleep(100);
+
+			WebElement Admin_Dose = driver.findElement(By.name("non_iv_admin_qty_1"));
+			try {
+				Admin_Dose.clear();
+			} catch (Exception e) {
+			}
+			Admin_Dose.sendKeys("2");
+
+			Thread.sleep(1000);
 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(2);

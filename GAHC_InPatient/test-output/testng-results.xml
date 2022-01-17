@@ -2,56 +2,28 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-13T22:29:08 EET" name="Suite" finished-at="2022-01-13T22:31:35 EET" duration-ms="146949">
+  <suite started-at="2022-01-17T16:14:09 EET" name="Suite" finished-at="2022-01-17T16:16:28 EET" duration-ms="139013">
     <groups>
     </groups>
-    <test started-at="2022-01-13T22:29:08 EET" name="test" finished-at="2022-01-13T22:31:35 EET" duration-ms="146949">
-      <class name="TestCases.IP_TC_714">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.IP_TC_714@2c767a52]" started-at="2022-01-13T22:29:08 EET" name="setup" finished-at="2022-01-13T22:31:11 EET" duration-ms="123102" status="PASS">
+    <test started-at="2022-01-17T16:14:09 EET" name="test" finished-at="2022-01-17T16:16:28 EET" duration-ms="139013">
+      <class name="TestCases.IP_TC_837">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:14:09 EET" name="setup" finished-at="2022-01-17T16:14:13 EET" duration-ms="4112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="navigate_to_Prescribe_Medications(java.lang.String)[pri:0, instance:TestCases.IP_TC_714@2c767a52]" started-at="2022-01-13T22:31:12 EET" name="navigate_to_Prescribe_Medications" data-provider="test_data" finished-at="2022-01-13T22:31:35 EET" duration-ms="23397" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[A200000403]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="navigate_to_Verify_Transfer_Stock_Across_Facilities()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:14:13 EET" name="navigate_to_Verify_Transfer_Stock_Across_Facilities" finished-at="2022-01-17T16:16:28 EET" duration-ms="134850" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element <div _ngcontent-c13="" class="patient-class-icon ">...</div> is not clickable at point (311, 182). Other element would receive the click: <div _ngcontent-c6="" class="loading-overlay ng-star-inserted">...</div>
-  (Session info: MicrosoftEdge=97.0.1072.55)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R4CIO73', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 97.0.1072.55, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:51022}, msedge: {msedgedriverVersion: 97.0.1072.55 (ce3bf33648805..., userDataDir: C:\Users\Dell\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3c0f981bb276942098aec3609ada6c51]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div _ngcontent-c13="" class="patient-class-icon ">...</div> is not clickable at point (311, 182). Other element would receive the click: <div _ngcontent-c6="" class="loading-overlay ng-star-inserted">...</div>
-  (Session info: MicrosoftEdge=97.0.1072.55)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-R4CIO73', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 97.0.1072.55, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:51022}, msedge: {msedgedriverVersion: 97.0.1072.55 (ce3bf33648805..., userDataDir: C:\Users\Dell\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3c0f981bb276942098aec3609ada6c51
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at DOC_Pages.DOC_SelectPatientIP.selectpatientIP_Edge(DOC_SelectPatientIP.java:29)
-at TestCases.IP_TC_714.navigate_to_Prescribe_Medications(IP_TC_714.java:47)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at PCY_Transfer_Stock_Across_Facilities.Verify_Transfer_Stock_Across_Facilities.transfer_stock(Verify_Transfer_Stock_Across_Facilities.java:221)
+at TestCases.IP_TC_837.navigate_to_Verify_Transfer_Stock_Across_Facilities(IP_TC_837.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,15 +54,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigate_to_Prescribe_Medications -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.IP_TC_714@2c767a52]" started-at="2022-01-13T22:31:35 EET" name="close" finished-at="2022-01-13T22:31:35 EET" duration-ms="1" status="PASS">
+        </test-method> <!-- navigate_to_Verify_Transfer_Stock_Across_Facilities -->
+        <test-method is-config="true" signature="close_browser()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:16:28 EET" name="close_browser" finished-at="2022-01-17T16:16:28 EET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- TestCases.IP_TC_714 -->
+        </test-method> <!-- close_browser -->
+      </class> <!-- TestCases.IP_TC_837 -->
     </test> <!-- test -->
   </suite> <!-- Suite -->
 </testng-results>

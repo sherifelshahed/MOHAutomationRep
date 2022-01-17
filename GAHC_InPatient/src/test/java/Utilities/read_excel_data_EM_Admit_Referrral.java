@@ -13,7 +13,7 @@ public class read_excel_data_EM_Admit_Referrral {
 
 	public String[][] read_sheet() throws InvalidFormatException, IOException {
 
-		File myfile = new File(".\\Test-data\\data_EM_Admit_Referrral.xlsx");
+		File myfile = new File(".\\Test-data\\data_EM_Admit_Referrral_IP_TC_139.xlsx");
 
 		wb = new XSSFWorkbook(myfile);
 		XSSFSheet mysheet = wb.getSheet("Sheet1");

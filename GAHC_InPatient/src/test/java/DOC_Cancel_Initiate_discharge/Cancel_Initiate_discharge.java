@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Cancel_Initiate_discharge {
 
-	public void cancel_initiate(WebDriver driver) {
+	public void cancel_initiate(WebDriver driver, String Patient_ID) {
 
 		try {
 
@@ -18,7 +18,7 @@ public class Cancel_Initiate_discharge {
 
 			By searchText = By
 					.xpath("/html/body/app-root/app-crm/div/div/app-crm-leads/app-crm-header/div/div/div[1]/input");
-			driver.findElement(searchText).sendKeys("A200000403" + Keys.ENTER);
+			driver.findElement(searchText).sendKeys(Patient_ID + Keys.ENTER);
 
 			Thread.sleep(8000);
 

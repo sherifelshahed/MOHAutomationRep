@@ -29,13 +29,13 @@ public class DOC_Submit_after_save_as_draft_order_Setup {
 	}
 
 	@Test(dataProvider = "test_data")
-	public void navigate_to_login(String Patient_ID) {
+	public void navigate_to_Submit_after_save_as_draft(String Patient_ID) {
 
 		DOC_Login_HP Login = new DOC_Login_HP();
 		Login.login_Edge(driver);
 
 		DOC_SelectPatientIP select_patient = new DOC_SelectPatientIP();
-		select_patient.selectpatientIP_Edge(driver, Patient_ID);
+		select_patient.selectpatientIP(driver, Patient_ID);
 
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);

@@ -61,7 +61,8 @@ public class Verify_Transfer_Stock_Across_Facilities {
 					driver.switchTo().frame("RequestDetailFrame");
 
 					WebElement ItemTXT = driver.findElement(By.name("item_desc"));
-					ItemTXT.sendKeys("RIFAMPIN 300MG HARD GELATIN CAPSULES");
+					ItemTXT.sendKeys("200-00546");
+
 					WebElement ItemBTN = driver.findElement(By.xpath("//table/tbody/tr/td/input[3]"));
 					ItemBTN.click();
 					Thread.sleep(5000);
@@ -145,18 +146,16 @@ public class Verify_Transfer_Stock_Across_Facilities {
 					driver.switchTo().defaultContent();
 					driver.switchTo().frame(1);
 					driver.switchTo().frame("menuFr");
-					// Thread.sleep(500);
-					// WebElement DispenseMed = driver.findElement(By.id("jd37"));
-					// DispenseMed.click();
-					// Thread.sleep(500);
-					// WebElement Issue = driver.findElement(By.id("jd43"));
-					// Issue.click();
+
 					Thread.sleep(500);
 					WebElement Authorize = driver.findElement(By.id("sd47"));
 					Authorize.click();
 					Thread.sleep(2000);
 				}
 			}
+
+			Thread.sleep(1000);
+
 			// Transfer_Item
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("content");
@@ -165,6 +164,8 @@ public class Verify_Transfer_Stock_Across_Facilities {
 			WebElement QueryBTN = driver.findElement(By.name("query"));
 			QueryBTN.click();
 
+			Thread.sleep(1000);
+
 			String currentWindoww = driver.getWindowHandle();
 			Set<String> windows1w = driver.getWindowHandles();
 			for (String window1w : windows1w) {
@@ -172,11 +173,13 @@ public class Verify_Transfer_Stock_Across_Facilities {
 				if (driver.getTitle().contains("Documents for Authorize")) {
 					System.out.println(driver.getCurrentUrl());
 
+					Thread.sleep(1000);
 					driver.switchTo().parentFrame();
 					driver.switchTo().defaultContent();
 					driver.switchTo().frame("RIAuthorizeQueryResultFrame");
 
-					WebElement DOC = driver.findElement(By.xpath("//table[2]/tbody/tr[14]/td[2]/font"));
+//					WebElement DOC = driver.findElement(By.xpath("//table[2]/tbody/tr[14]/td[2]/font"));
+					WebElement DOC = driver.findElement(By.className("OAQRYEVEN"));
 					DOC.click();
 
 					driver.switchTo().window(currentWindoww);
@@ -195,12 +198,15 @@ public class Verify_Transfer_Stock_Across_Facilities {
 					WebElement ApplyBTN = driver.findElement(By.name("apply"));
 					ApplyBTN.click();
 
+					Thread.sleep(1000);
+
 					String currentWindown = driver.getWindowHandle();
 					Set<String> windows1n = driver.getWindowHandles();
 					for (String window1n : windows1n) {
 						driver.switchTo().window(window1n);
 						if (driver.getTitle().contains("Current Pending Request")) {
-							System.out.println(driver.getCurrentUrl());
+
+							Thread.sleep(1000);
 
 							WebElement ContinueBTN = driver.findElement(By.name("continue"));
 							ContinueBTN.click();
@@ -216,6 +222,8 @@ public class Verify_Transfer_Stock_Across_Facilities {
 
 						}
 					}
+
+					Thread.sleep(2000);
 
 					driver.switchTo().defaultContent();
 					driver.switchTo().frame("content");

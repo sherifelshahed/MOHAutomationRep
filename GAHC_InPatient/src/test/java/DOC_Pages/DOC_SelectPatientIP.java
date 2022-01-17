@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class DOC_SelectPatientIP {
 
-	public void selectpatientIP_Edge(WebDriver driver, String Patient_ID) {
+	public void selectpatientIP(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 

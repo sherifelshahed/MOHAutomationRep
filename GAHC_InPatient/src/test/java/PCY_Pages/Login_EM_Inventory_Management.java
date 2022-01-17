@@ -14,7 +14,7 @@ public class Login_EM_Inventory_Management {
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
 		By username = By.name("name");
-		driver.findElement(username).sendKeys("CMOIPD01");
+		driver.findElement(username).sendKeys("PCYIPD01");
 
 		By password = By.name("password");
 		driver.findElement(password).sendKeys("egy123");
@@ -34,7 +34,7 @@ public class Login_EM_Inventory_Management {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
 		String homePage = it.next();

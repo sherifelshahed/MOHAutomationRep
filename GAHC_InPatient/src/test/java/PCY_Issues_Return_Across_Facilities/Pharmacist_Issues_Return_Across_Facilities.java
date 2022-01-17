@@ -77,7 +77,8 @@ public class Pharmacist_Issues_Return_Across_Facilities {
 					WebElement ItemQTY = driver.findElement(By.name("item_qty"));
 					ItemQTY.sendKeys("5");
 
-					Thread.sleep(500);
+					Thread.sleep(1000);
+
 					WebElement AddBTN = driver.findElement(By.name("apply"));
 					AddBTN.click();
 					Thread.sleep(2000);
@@ -171,8 +172,15 @@ public class Pharmacist_Issues_Return_Across_Facilities {
 			driver.switchTo().frame("f_query_add_mod");
 			driver.switchTo().frame("frameAcknowledgeHeader");
 
+			WebElement TRN_Type = driver.findElement(By.name("trn_type"));
+			TRN_Type.click();
+			TRN_Type.sendKeys(Keys.ARROW_DOWN);
+			TRN_Type.sendKeys(Keys.ARROW_DOWN);
+			TRN_Type.sendKeys(Keys.TAB);
+
 			WebElement Store = driver.findElement(By.name("store_code"));
 			Store.click();
+			Store.sendKeys(Keys.ARROW_DOWN);
 			Store.sendKeys(Keys.ARROW_DOWN);
 			Store.sendKeys(Keys.TAB);
 

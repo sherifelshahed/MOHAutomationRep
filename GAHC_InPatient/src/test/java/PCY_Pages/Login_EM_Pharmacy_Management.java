@@ -15,7 +15,7 @@ public class Login_EM_Pharmacy_Management {
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
 		By username = By.name("name");
-		driver.findElement(username).sendKeys("CMOIPD01");
+		driver.findElement(username).sendKeys("PCYIPD01");
 
 		By password = By.name("password");
 		driver.findElement(password).sendKeys("egy123");
@@ -28,6 +28,8 @@ public class Login_EM_Pharmacy_Management {
 		Responsiblity.click();
 		Responsiblity.sendKeys(Keys.ARROW_UP);
 		Responsiblity.sendKeys(Keys.TAB);
+
+		driver.findElement(loginButton).click();
 
 		try {
 			Thread.sleep(2000);

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="TestCases.IP_TC_714">
+      <class name="TestCases.IP_TC_837">
         <methods>
-          <include name="close"/>
-          <include name="navigate_to_Prescribe_Medications" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="navigate_to_Verify_Transfer_Stock_Across_Facilities"/>
+          <include name="close_browser"/>
         </methods>
-      </class> <!-- TestCases.IP_TC_714 -->
+      </class> <!-- TestCases.IP_TC_837 -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

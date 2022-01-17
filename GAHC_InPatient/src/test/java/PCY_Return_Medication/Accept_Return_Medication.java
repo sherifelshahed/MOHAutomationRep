@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Accept_Return_Medication {
-	public void Medication(WebDriver driver) {
+	public void Medication(WebDriver driver, String Patient_ID) {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -26,8 +26,10 @@ public class Accept_Return_Medication {
 			driver.switchTo().frame("content");
 			driver.switchTo().frame("f_query_criteria");
 			driver.switchTo().frame("wardretmedicationqueryframe");
+
 			WebElement patientID = driver.findElement(By.name("Patient_Id"));
-			patientID.sendKeys("A200000403");
+			patientID.sendKeys(Patient_ID);
+
 			WebElement searchBtn = driver.findElement(By.name("Search"));
 			searchBtn.click();
 

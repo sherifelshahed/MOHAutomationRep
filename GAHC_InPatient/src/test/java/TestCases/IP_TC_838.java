@@ -16,16 +16,18 @@ public class IP_TC_838 {
 	public void setup() {
 
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+
 		// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();
+
 	}
 
 	@Test
-	public void navigate_to_login() {
+	public void navigate_to_Pharmacist_Issues_Return_Across_Facilities() {
 
 		Login_EM_Inventory_Management login = new Login_EM_Inventory_Management();
 		login.login(driver);
@@ -33,13 +35,11 @@ public class IP_TC_838 {
 		Pharmacist_Issues_Return_Across_Facilities isssue = new Pharmacist_Issues_Return_Across_Facilities();
 		isssue.issue_return(driver);
 
-		;
-
 	}
 
 	@AfterTest
 	public void close_browser() {
-//		driver.close();
+		driver.close();
 	}
 
 }

@@ -40,7 +40,7 @@ public class IP_TC_687 {
 
 	@AfterTest
 	public void close_browser() {
-//		driver.close();
+		driver.close();
 	}
 
 }

@@ -15,7 +15,7 @@ public class SelectForm {
 			Thread.sleep(5000);
 			
 			// Click on Action
-			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[5]");
+			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[7]");
 			driver.findElement(Action).click();
 
 			// Select New Document
