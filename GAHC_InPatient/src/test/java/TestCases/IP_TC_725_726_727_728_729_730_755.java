@@ -9,7 +9,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import DOC_IPD_OPConsultation.*;
 import DOC_Pages.*;
 import Utilities.read_excel_data_HP;
@@ -22,8 +21,11 @@ public class IP_TC_725_726_727_728_729_730_755 {
 	public void setup() {
 
 		// System Property for Edge Driver
-		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
-		System.setProperty("webdriver.edge.driver", EdgePath);
+//		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+//		System.setProperty("webdriver.edge.driver", EdgePath);
+
+		System.setProperty("webdriver.edge.driver",
+				"D:\\Automation testing tools\\Edgedriver\\edgedriver_win32\\msedgedriver.exe");
 
 		// Initialize Edge Driver
 		driver = new EdgeDriver();
@@ -51,7 +53,7 @@ public class IP_TC_725_726_727_728_729_730_755 {
 
 	@AfterTest
 	public void close() {
-		driver.close();
+//		driver.close();
 	}
 
 	@DataProvider

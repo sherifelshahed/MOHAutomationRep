@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class Place_Lab_Order {
 
 	public void Physicians_order_Edge(WebDriver driver) {
-		
+
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		try {
@@ -69,6 +69,8 @@ public class Place_Lab_Order {
 			By submit_Button = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
 			driver.findElement(submit_Button).click();
+
+			Thread.sleep(5000);
 
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");

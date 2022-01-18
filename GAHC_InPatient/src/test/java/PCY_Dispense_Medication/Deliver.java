@@ -79,15 +79,21 @@ public class Deliver {
 
 			System.out.println(" PCY Deliver Medications successfully ");
 
-//			String CurrentWindow1 = driver.getWindowHandle();
-//			for (String WindowID : driver.getWindowHandles()) {
-//				String Title = driver.switchTo().window(WindowID).getTitle();
-//				System.out.println(Title);
-//				if (Title.equals("Dispensing Medication Login")) {
-//					WebElement OkBtn = driver.findElement(By.xpath("//input[@value='OK']"));
-//					OkBtn.click();
-//				}
-//			}
+			Thread.sleep(1000);
+
+			String CurrentWindowp = driver.getWindowHandle();
+			for (String Windowp : driver.getWindowHandles()) {
+				String Title = driver.switchTo().window(Windowp).getTitle();
+				System.out.println(Title);
+				if (Title.equals("Print/Edit Label")) {
+
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame("buttonFrame");
+
+					WebElement Cancel = driver.findElement(By.name("btnCancel"));
+					Cancel.click();
+				}
+			}
 
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Deliver.class.getName()).log(Level.SEVERE, null, ex);

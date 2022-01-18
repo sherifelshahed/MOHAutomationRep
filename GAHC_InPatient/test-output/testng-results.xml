@@ -1,68 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-17T16:14:09 EET" name="Suite" finished-at="2022-01-17T16:16:28 EET" duration-ms="139013">
+  <suite started-at="2022-01-19T00:06:34 EET" name="Suite" finished-at="2022-01-19T00:13:14 EET" duration-ms="399377">
     <groups>
     </groups>
-    <test started-at="2022-01-17T16:14:09 EET" name="test" finished-at="2022-01-17T16:16:28 EET" duration-ms="139013">
-      <class name="TestCases.IP_TC_837">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:14:09 EET" name="setup" finished-at="2022-01-17T16:14:13 EET" duration-ms="4112" status="PASS">
+    <test started-at="2022-01-19T00:06:34 EET" name="test" finished-at="2022-01-19T00:13:14 EET" duration-ms="399377">
+      <class name="TestCases.GroupM">
+        <test-method signature="navigate_to_Prescribe_Medications(java.lang.String)[pri:1, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:06:35 EET" name="navigate_to_Prescribe_Medications" data-provider="test_data" finished-at="2022-01-19T00:08:52 EET" duration-ms="136782" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="navigate_to_Verify_Transfer_Stock_Across_Facilities()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:14:13 EET" name="navigate_to_Verify_Transfer_Stock_Across_Facilities" finished-at="2022-01-17T16:16:28 EET" duration-ms="134850" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at PCY_Transfer_Stock_Across_Facilities.Verify_Transfer_Stock_Across_Facilities.transfer_stock(Verify_Transfer_Stock_Across_Facilities.java:221)
-at TestCases.IP_TC_837.navigate_to_Verify_Transfer_Stock_Across_Facilities(IP_TC_837.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- navigate_to_Prescribe_Medications -->
+        <test-method signature="navigate_to_Verification(java.lang.String)[pri:2, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:08:52 EET" name="navigate_to_Verification" data-provider="test_data" finished-at="2022-01-19T00:09:34 EET" duration-ms="42620" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigate_to_Verify_Transfer_Stock_Across_Facilities -->
-        <test-method is-config="true" signature="close_browser()[pri:0, instance:TestCases.IP_TC_837@41e36e46]" started-at="2022-01-17T16:16:28 EET" name="close_browser" finished-at="2022-01-17T16:16:28 EET" duration-ms="0" status="PASS">
+        </test-method> <!-- navigate_to_Verification -->
+        <test-method signature="navigate_to_Stock_Availability_of_medications(java.lang.String)[pri:3, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:09:35 EET" name="navigate_to_Stock_Availability_of_medications" data-provider="test_data" finished-at="2022-01-19T00:10:12 EET" duration-ms="37002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Stock_Availability_of_medications -->
+        <test-method signature="navigate_to_Fill(java.lang.String)[pri:4, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:10:12 EET" name="navigate_to_Fill" data-provider="test_data" finished-at="2022-01-19T00:11:03 EET" duration-ms="51124" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Fill -->
+        <test-method signature="navigate_to_Deliver(java.lang.String)[pri:5, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:11:03 EET" name="navigate_to_Deliver" data-provider="test_data" finished-at="2022-01-19T00:11:53 EET" duration-ms="50089" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Deliver -->
+        <test-method signature="navigate_to_Accept_Return_Medication(java.lang.String)[pri:6, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:11:53 EET" name="navigate_to_Accept_Return_Medication" data-provider="test_data" finished-at="2022-01-19T00:12:37 EET" duration-ms="43737" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Accept_Return_Medication -->
+        <test-method signature="navigate_to_Reject_Return_Medication(java.lang.String)[pri:7, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:12:37 EET" name="navigate_to_Reject_Return_Medication" data-provider="test_data" finished-at="2022-01-19T00:13:14 EET" duration-ms="36995" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A200000403]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Reject_Return_Medication -->
+        <test-method is-config="true" signature="close_browser()[pri:0, instance:TestCases.GroupM@2c767a52]" started-at="2022-01-19T00:13:14 EET" name="close_browser" finished-at="2022-01-19T00:13:14 EET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->
-      </class> <!-- TestCases.IP_TC_837 -->
+      </class> <!-- TestCases.GroupM -->
     </test> <!-- test -->
   </suite> <!-- Suite -->
 </testng-results>

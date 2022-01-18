@@ -89,6 +89,8 @@ public class Place_Rad_Order {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
 			driver.findElement(Submit_Button).click();
 
+			Thread.sleep(5000);
+
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");
 		} catch (InterruptedException ex) {

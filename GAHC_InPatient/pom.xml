@@ -78,6 +78,12 @@
 			<artifactId>lambdatest-tunnel-binary</artifactId>
 			<version>1.0.4</version>
 		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -128,6 +134,12 @@
 					<artifactId>maven-surefire-report-plugin</artifactId>
 					<version>3.0.0-M5</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>3.2.0</version>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>

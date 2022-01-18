@@ -128,7 +128,21 @@ public class Fill {
 									WebElement Ok = driver.findElement(By.name("btnOk"));
 									Ok.click();
 
-									Thread.sleep(300);
+									Thread.sleep(500);
+
+//									String CurrentWindowp = driver.getWindowHandle();
+//									for (String Windowp : driver.getWindowHandles()) {
+//										String Title2 = driver.switchTo().window(Windowp).getTitle();
+//										System.out.println(Title2);
+//										if (Title.equals("Print/Edit Label")) {
+//
+//											driver.switchTo().defaultContent();
+//											driver.switchTo().frame("buttonFrame");
+//
+//											WebElement Cancel = driver.findElement(By.name("btnCancel"));
+//							         		Cancel.click();
+//
+//											Thread.sleep(300);
 
 									System.out.println(" PCY Fill Medications successfully ");
 

@@ -1,5 +1,6 @@
 package DOC_IPD_OPConsultation;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -10,10 +11,11 @@ import org.openqa.selenium.WebDriver;
 public class SelectForm {
 	public void select_form(WebDriver driver) {
 
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
 		try {
 
-			Thread.sleep(5000);
-
+			Thread.sleep(6000);
 			// Click on Action
 			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[6]");
 			driver.findElement(Action).click();

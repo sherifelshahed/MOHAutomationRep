@@ -68,14 +68,14 @@ public class Prescribe_Medications {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-consultation-note/div/div/div[1]/div[2]/app-consultation-note-section/div/div/app-consultation-note-prescription/div/div/div[1]/div[2]/div[3]/div[1]");
 			driver.findElement(Select_Prescription_order).click();
 
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 
 			// Fill Prescription Order
 			By select_Route = By
 					.xpath("//*[@id=\"200-00337#0#PRESROUTE\"]/div/div/app-segment/div/div/div[2]/div[1]/div/input");
 			driver.findElement(select_Route).click();
 
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 
 			By select_Frequency = By
 					.xpath("//*[@id=\"200-00337#0#PRESFRQ\"]/div/div/app-segment/div/div/div[2]/div[2]/div/input");
@@ -96,6 +96,8 @@ public class Prescribe_Medications {
 			By Submit_Button = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/app-activity-modal/div[1]/div[2]/div/div[2]/div[2]/app-clinicalform/div/div[2]/div[2]/div[2]/button[4]");
 			driver.findElement(Submit_Button).click();
+
+			Thread.sleep(5000);
 
 			JavascriptExecutor java = (JavascriptExecutor) driver;
 			java.executeScript("scroll(0,250)");

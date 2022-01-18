@@ -43,7 +43,7 @@ public class GroupL {
 		Place_Lab_Order order = new Place_Lab_Order();
 		order.Physicians_order_Edge(driver);
 
-		driver.quit();
+//		driver.quit();
 	}
 
 	// IP_TC_520
@@ -98,7 +98,7 @@ public class GroupL {
 		Place_Rad_Order order = new Place_Rad_Order();
 		order.Physicians_order_Edge(driver);
 
-		driver.quit();
+//		driver.quit();
 	}
 
 	// IP_TC_522
@@ -123,7 +123,8 @@ public class GroupL {
 
 		Register_Rad_Order Order = new Register_Rad_Order();
 		Order.register(driver, Patient_ID);
-		driver.quit();
+
+//		driver.quit();
 	}
 
 	@AfterTest

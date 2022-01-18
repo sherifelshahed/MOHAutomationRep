@@ -45,10 +45,10 @@ public class GroupM {
 		SelectForm Form = new SelectForm();
 		Form.select_form(driver);
 
-		Prescribe_Medications order = new Prescribe_Medications();
-		order.Physicians_Prescribe_Medications_Edge(driver);
+		Prescribe_Medications Medication = new Prescribe_Medications();
+		Medication.Physicians_Prescribe_Medications_Edge(driver);
 
-		driver.quit();
+//		driver.quit();
 	}
 
 	// IP_TC_842
@@ -117,7 +117,7 @@ public class GroupM {
 		Fill dispense2 = new Fill();
 		dispense2.fill(driver, Patient_ID);
 
-		driver.quit();
+//		driver.quit();
 	}
 
 	// IP_TC_845

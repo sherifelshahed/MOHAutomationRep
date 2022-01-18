@@ -20,8 +20,6 @@ public class Accept_Return_Medication {
 			WebElement ward_return = driver.findElement(By.linkText("Ward Return"));
 			ward_return.click();
 
-			// driver.switchTo().parentFrame();
-			// driver.switchTo().frame();
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("content");
 			driver.switchTo().frame("f_query_criteria");
@@ -65,8 +63,10 @@ public class Accept_Return_Medication {
 			driver.switchTo().frame("content");
 			driver.switchTo().frame("f_query_criteria");
 			driver.switchTo().frame("wardretmedicationbuttonframe");
+
 			WebElement ReturnBtn = driver.findElement(By.name("Return"));
 			ReturnBtn.click();
+
 			System.out.println(driver.switchTo().alert().getText());
 			driver.switchTo().alert().dismiss();
 
@@ -76,14 +76,13 @@ public class Accept_Return_Medication {
 			WebElement successMsg = driver.findElement(By.xpath("html/body/p"));
 			System.out.println(successMsg.getText());
 
-			/// 3la el return medication function
-			// System.out.println(driver.getCurrentUrl());
-
 			driver.navigate().refresh();
 			driver.switchTo().frame(1);
 			driver.switchTo().frame("menuFr");
+
 			WebElement PH_Transactions2 = driver.findElement(By.linkText("PH Transactions"));
 			PH_Transactions2.click();
+
 			WebElement return_medication = driver.findElement(By.linkText("Return Medication"));
 			return_medication.click();
 
@@ -92,13 +91,16 @@ public class Accept_Return_Medication {
 				String Title = driver.switchTo().window(WindowID).getTitle();
 				System.out.println(Title);
 				if (Title.equals("Return Medication Login")) {
+
 					System.out.println(driver.getCurrentUrl());
 					WebElement pass = driver.findElement(By.name("password"));
 					pass.sendKeys("egy123");
+
 					WebElement DispenseStage = driver.findElement(By.name("Patient_Category"));
 					DispenseStage.click();
 					DispenseStage.sendKeys(Keys.ARROW_DOWN);
 					DispenseStage.sendKeys(Keys.TAB);
+
 					WebElement LocationOptions = driver.findElement(By.name("disp_locn"));
 					LocationOptions.click();
 					LocationOptions.sendKeys(Keys.ARROW_DOWN);
@@ -112,8 +114,9 @@ public class Accept_Return_Medication {
 			driver.switchTo().frame("f_query_add_mod");
 			driver.switchTo().frame("retmedicationqueryframe");
 			Thread.sleep(5000);
+
 			WebElement RMpatientID = driver.findElement(By.name("Patient_Id"));
-			RMpatientID.sendKeys("A200000403");
+			RMpatientID.sendKeys(Patient_ID);
 			WebElement RMsearchBtn = driver.findElement(By.name("Search1"));
 			RMsearchBtn.click();
 
@@ -143,8 +146,7 @@ public class Accept_Return_Medication {
 			WebElement successMsg1 = driver.findElement(By.xpath("html/body/p"));
 			System.out.println(successMsg1.getText());
 
-			Thread.sleep(120000);
-			driver.quit();
+			Thread.sleep(3000);
 
 		} catch (InterruptedException ex) {
 			Logger.getLogger(Accept_Return_Medication.class.getName()).log(Level.SEVERE, null, ex);

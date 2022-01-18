@@ -1,6 +1,5 @@
 package DOC_Prescribe_Medications;
 
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,11 +10,9 @@ import org.openqa.selenium.WebDriver;
 public class SelectForm {
 	public void select_form(WebDriver driver) {
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
 		try {
 
-			Thread.sleep(10000);
+			Thread.sleep(7000);
 			// Click on Action
 			By Action = By.xpath("/html/body/app-root/app-crm/div/div/app-patient-view/div/div/div[2]/div/div[6]");
 			driver.findElement(Action).click();
@@ -25,13 +22,14 @@ public class SelectForm {
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-lead-actions-popover/div/div/div[3]/div");
 			driver.findElement(newDocument).click();
 
-			Thread.sleep(5000);
+			Thread.sleep(6000);
 
 			// Search for Form
 			By searchFormText = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[1]/input");
 			driver.findElement(searchFormText).sendKeys("old Physicians order form" + Keys.ENTER);
 
+			Thread.sleep(2000);
 			// Select The Form
 			By selectform = By.xpath(
 					"/html/body/app-root/app-crm/div/div/app-patient-view/app-crm-forms-list/div/div[2]/div[2]/div[2]/div[2]");
