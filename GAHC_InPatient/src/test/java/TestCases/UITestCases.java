@@ -4,29 +4,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import java.awt.AWTException;
 import javax.swing.JRadioButton;
-
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import org.testng.collections.Lists;
-import org.testng.xml.XmlSuite;
-
 import java.awt.event.ActionListener;
-import java.nio.file.DirectoryStream.Filter;
-import java.util.ArrayList;
-import java.util.List;
 import java.awt.event.ActionEvent;
-import javax.swing.JDesktopPane;
-import javax.swing.JScrollPane;
-import javax.swing.JProgressBar;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ChangeEvent;
-import javax.swing.JTree;
-import java.awt.Color;
 import java.awt.SystemColor;
 
-@SuppressWarnings("unused")
+
 public class UITestCases {
 
 	private JFrame frame;
@@ -63,11 +48,6 @@ public class UITestCases {
 		frame.setBounds(100, 100, 1239, 511);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-
-		String a= "CMOIPD01";
-		String b= "egy123";
-		String c= "NURIPD01";
-		String d= "ACCIPD01";
 
 
 		final JRadioButton rdbtnNewRadioButton = new JRadioButton("IP_TC_002_003_004");
@@ -480,44 +460,44 @@ public class UITestCases {
 		frame.getContentPane().add(rdbtnNewRadioButton_77);
 
 		final JRadioButton rdbtnNewRadioButton_78 = new JRadioButton("IP_TC_884");
-		rdbtnNewRadioButton_78.setBounds(1035, 7, 109, 23);
+		rdbtnNewRadioButton_78.setBounds(1056, 7, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_78);
 
 		final JRadioButton rdbtnNewRadioButton_79 = new JRadioButton("IP_TC_886");
-		rdbtnNewRadioButton_79.setBounds(1035, 30, 109, 23);
+		rdbtnNewRadioButton_79.setBounds(1056, 30, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_79);
 
 		final JRadioButton rdbtnNewRadioButton_80 = new JRadioButton("IP_TC_887");
-		rdbtnNewRadioButton_80.setBounds(1035, 52, 109, 23);
+		rdbtnNewRadioButton_80.setBounds(1056, 52, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_80);
 
 		final JRadioButton rdbtnNewRadioButton_81 = new JRadioButton("GroupA");
-		rdbtnNewRadioButton_81.setBounds(1035, 78, 109, 23);
+		rdbtnNewRadioButton_81.setBounds(1056, 78, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_81);
 
 		final JRadioButton rdbtnNewRadioButton_82 = new JRadioButton("GroupB");
-		rdbtnNewRadioButton_82.setBounds(1035, 104, 109, 23);
+		rdbtnNewRadioButton_82.setBounds(1056, 104, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_82);
 
 		final JRadioButton rdbtnNewRadioButton_83 = new JRadioButton("GroupC");
-		rdbtnNewRadioButton_83.setBounds(1035, 130, 109, 23);
+		rdbtnNewRadioButton_83.setBounds(1056, 130, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_83);
 
 		final JRadioButton rdbtnNewRadioButton_84 = new JRadioButton("GroupF");
-		rdbtnNewRadioButton_84.setBounds(1035, 156, 109, 23);
+		rdbtnNewRadioButton_84.setBounds(1056, 156, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_84);
 
 		final JRadioButton rdbtnNewRadioButton_85 = new JRadioButton("GroupHP");
-		rdbtnNewRadioButton_85.setBounds(1035, 179, 109, 23);
+		rdbtnNewRadioButton_85.setBounds(1056, 179, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_85);
 
 		final JRadioButton rdbtnNewRadioButton_86 = new JRadioButton("GroupL");
-		rdbtnNewRadioButton_86.setBounds(1035, 205, 109, 23);
+		rdbtnNewRadioButton_86.setBounds(1056, 205, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_86);
 
 		final JRadioButton rdbtnNewRadioButton_87 = new JRadioButton("GroupM");
 		rdbtnNewRadioButton_87.setBackground(SystemColor.menu);
-		rdbtnNewRadioButton_87.setBounds(1035, 231, 109, 23);
+		rdbtnNewRadioButton_87.setBounds(1056, 231, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_87);
 
 
