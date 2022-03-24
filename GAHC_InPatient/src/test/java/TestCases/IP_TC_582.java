@@ -15,9 +15,8 @@ public class IP_TC_582 {
 	@BeforeTest
 	public void setup() {
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();

@@ -8,17 +8,52 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">399,377</td><td></td><td></td></tr>
+<tr><th colspan="8">Command line suite</th></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">50,408</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">TestCases.GroupM</td><td><a href="#m0">navigate_to_Accept_Return_Medication</a></td><td rowspan="1">1642543913311</td><td rowspan="1">43737</td></tr><tr class="passedeven"><td><a href="#m1">navigate_to_Deliver</a></td><td rowspan="1">1642543863198</td><td rowspan="1">50089</td></tr><tr class="passedeven"><td><a href="#m2">navigate_to_Fill</a></td><td rowspan="1">1642543812057</td><td rowspan="1">51124</td></tr><tr class="passedeven"><td><a href="#m3">navigate_to_Prescribe_Medications</a></td><td rowspan="1">1642543595561</td><td rowspan="1">136782</td></tr><tr class="passedeven"><td><a href="#m4">navigate_to_Reject_Return_Medication</a></td><td rowspan="1">1642543957070</td><td rowspan="1">36995</td></tr><tr class="passedeven"><td><a href="#m5">navigate_to_Stock_Availability_of_medications</a></td><td rowspan="1">1642543775023</td><td rowspan="1">37002</td></tr><tr class="passedeven"><td><a href="#m6">navigate_to_Verification</a></td><td rowspan="1">1642543732373</td><td rowspan="1">42620</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.GroupX</td><td><a href="#m0">navigate_to_Verify_Assign_Bed_UI</a></td><td rowspan="1">1645706116752</td><td rowspan="1">0</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestCases.GroupX</td><td><a href="#m1">navigate_to_Nurse_Check_Block_Bed_UI</a></td><td rowspan="1">1645706073851</td><td rowspan="1">42887</td></tr><tr class="passedeven"><td><a href="#m2">navigate_to_Nurse_Check_Intra_Ward_Patient_Transfer_UI</a></td><td rowspan="1">1645706116753</td><td rowspan="1">7439</td></tr></tbody>
 </table>
-<h2>test</h2><h3 id="m0">TestCases.GroupM#navigate_to_Accept_Return_Medication</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCases.GroupM#navigate_to_Deliver</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestCases.GroupM#navigate_to_Fill</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestCases.GroupM#navigate_to_Prescribe_Medications</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">TestCases.GroupM#navigate_to_Reject_Return_Medication</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">TestCases.GroupM#navigate_to_Stock_Availability_of_medications</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">TestCases.GroupM#navigate_to_Verification</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>A200000403</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">TestCases.GroupX#navigate_to_Verify_Assign_Bed_UI</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Method public void TestCases.GroupX.navigate_to_Verify_Assign_Bed_UI(java.lang.String) requires a @DataProvider named : test_data
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TestCases.UITestCases$2.actionPerformed(UITestCases.java:1198)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6617)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6382)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2264)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4993)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2322)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4934)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4563)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4504)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2308)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2773)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCases.GroupX#navigate_to_Nurse_Check_Block_Bed_UI</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCases.GroupX#navigate_to_Nurse_Check_Intra_Ward_Patient_Transfer_UI</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

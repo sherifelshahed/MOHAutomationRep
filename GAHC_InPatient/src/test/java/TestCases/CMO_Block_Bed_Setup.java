@@ -15,9 +15,8 @@ public class CMO_Block_Bed_Setup {
 	@BeforeTest
 	public void setup() {
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();

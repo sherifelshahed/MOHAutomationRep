@@ -19,8 +19,8 @@ public class IP_TC_351 {
 	public void navigate_to_Initiate_discharge(String Patient_ID) {
 
 		// System Property for Edge Driver
-		System.setProperty("webdriver.edge.driver", "D:\\Automation testing tools\\Edgedriver\\msedgedriver.exe");
-		// Initialize Edge Driver
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
@@ -39,9 +39,8 @@ public class IP_TC_351 {
 	public void navigate_to_Prepare_Discharge_Advice(String Patient_ID) {
 
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();
@@ -59,8 +58,8 @@ public class IP_TC_351 {
 	public void navigate_to_Discharge_Summary(String Patient_ID) {
 
 		// System Property for Edge Driver
-		System.setProperty("webdriver.edge.driver", "D:\\Automation testing tools\\Edgedriver\\msedgedriver.exe");
-		// Initialize Edge Driver
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
@@ -79,9 +78,9 @@ public class IP_TC_351 {
 	public void navigate_to_ACC_Add_Service(String Patient_ID) {
 
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();
@@ -99,9 +98,9 @@ public class IP_TC_351 {
 	public void navigate_to_Bill_Generation(String Patient_ID) {
 
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();
@@ -119,9 +118,9 @@ public class IP_TC_351 {
 	public void navigate_to_Discharge_Patient(String Patient_ID) {
 
 		// System Property for IE Driver
-		System.setProperty("webdriver.ie.driver",
-				"D:\\Automation testing tools\\IEDriverServer\\IEDriver\\IE\\New folder\\IEDriverServer.exe");
-		// Initialize InternetExplorer
+		String InterExploPath = System.getProperty("user.dir") + "\\Drivers\\IEDriverServer.exe";
+		System.setProperty("webdriver.ie.driver", InterExploPath);
+// Initialize InternetExplorer
 		driver = new InternetExplorerDriver();
 		driver.navigate().to("http://10.209.1.5:7777/HIS/eSM/jsp/login.jsp");
 		driver.manage().window().maximize();

@@ -500,6 +500,9 @@ public class UITestCases {
 		rdbtnNewRadioButton_87.setBounds(1056, 231, 109, 23);
 		frame.getContentPane().add(rdbtnNewRadioButton_87);
 
+		final JRadioButton rdbtnNewRadioButton_88 = new JRadioButton("Group X");
+		rdbtnNewRadioButton_88.setBounds(1056, 259, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_88);
 
 		JButton btnNewButton = new JButton("Run");
 		btnNewButton.setBounds(1124, 438, 89, 23);
@@ -1187,6 +1190,12 @@ public class UITestCases {
 					testng.setTestClasses(new Class[] { GroupM.class });
 					testng.addListener(tla);
 					testng.run();
+				}else if(rdbtnNewRadioButton_88.isSelected()) {
+					TestListenerAdapter tla = new TestListenerAdapter();
+					TestNG testng = new TestNG();
+					testng.setTestClasses(new Class[] { GroupX.class });
+					testng.addListener(tla);
+					testng.run();
 				}
 
 			}
@@ -1297,7 +1306,7 @@ public class UITestCases {
 		bg.add(rdbtnNewRadioButton_76);
 		bg.add(rdbtnNewRadioButton_77);
 		bg.add(rdbtnNewRadioButton_78);
-		bg.add(rdbtnNewRadioButton_79);
+		bg.add(rdbtnNewRadioButton_79); 
 		bg.add(rdbtnNewRadioButton_80);
 		bg.add(rdbtnNewRadioButton_81);
 		bg.add(rdbtnNewRadioButton_82);
@@ -1306,6 +1315,9 @@ public class UITestCases {
 		bg.add(rdbtnNewRadioButton_85);
 		bg.add(rdbtnNewRadioButton_86);
 		bg.add(rdbtnNewRadioButton_87);
+		bg.add(rdbtnNewRadioButton_88);
+		
+		
 
 	}
 }

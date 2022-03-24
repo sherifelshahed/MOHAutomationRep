@@ -24,9 +24,8 @@ public class IP_TC_725_726_727_728_729_730_755 {
 //		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
 //		System.setProperty("webdriver.edge.driver", EdgePath);
 
-		System.setProperty("webdriver.edge.driver",
-				"D:\\Automation testing tools\\Edgedriver\\edgedriver_win32\\msedgedriver.exe");
-
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);
 		// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");

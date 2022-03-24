@@ -15,8 +15,8 @@ public class IP_TC_519 {
 	@BeforeTest
 	public void setup() {
 		// System Property for Edge Driver
-		System.setProperty("webdriver.edge.driver", "D:\\Automation testing tools\\Edgedriver\\msedgedriver.exe");
-		// Initialize Edge Driver
+		String EdgePath = System.getProperty("user.dir") + "\\Drivers\\msedgedriver.exe";
+		System.setProperty("webdriver.edge.driver", EdgePath);// Initialize Edge Driver
 		driver = new EdgeDriver();
 		driver.navigate().to("http://10.209.1.140/healthplug/#/user/leads");
 		driver.manage().window().maximize();
