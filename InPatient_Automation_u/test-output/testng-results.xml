@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-30T14:16:27 EET" name="Command line suite" finished-at="2022-03-30T14:16:55 EET" duration-ms="28259">
+    <groups>
+    </groups>
+    <test started-at="2022-03-30T14:16:27 EET" name="Command line test" finished-at="2022-03-30T14:16:55 EET" duration-ms="28259">
+      <class name="TestCases.IP_TC_839">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.IP_TC_839@662cea2d]" started-at="2022-03-30T14:16:27 EET" name="setup" finished-at="2022-03-30T14:16:29 EET" duration-ms="1534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="navigate_to_Pharmacist_Scrappes_Medicine()[pri:0, instance:TestCases.IP_TC_839@662cea2d]" started-at="2022-03-30T14:16:29 EET" name="navigate_to_Pharmacist_Scrappes_Medicine" finished-at="2022-03-30T14:16:55 EET" duration-ms="26725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_Pharmacist_Scrappes_Medicine -->
+        <test-method is-config="true" signature="close_browser()[pri:0, instance:TestCases.IP_TC_839@662cea2d]" started-at="2022-03-30T14:16:55 EET" name="close_browser" finished-at="2022-03-30T14:16:55 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_browser -->
+      </class> <!-- TestCases.IP_TC_839 -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
